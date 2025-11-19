@@ -32,4 +32,7 @@ Visualizes flocking behavior based on Craig Reynolds’ classic Boids model, wit
   - Launching the tutorial
  
 ### How to Run
-Releases can be found at https://github.com/BagelVulture/BVs_Boids/releases/tag/1.0.0 or at the root as BVs_Boids.jar, current version is 1.0.0
+- Download a built .jar or release. Releases can be found at https://github.com/BagelVulture/BVs_Boids/releases/tag/1.0.0 and the .jar is at https://github.com/BagelVulture/BVs_Boids, current version is 1.0.0
+- Ensure you have java 8 or higher. Java can be downloaded from https://www.java.com/en/download/manual.jsp
+- Run the .jar by double clicking, right-clicking and selecting "open" (or "open with" and choosing JavaLauncher), or running ```java -jar BVs_Boids.jar``` in the terminal.
+- A new window with the simulation should appear.
