@@ -1,5 +1,3 @@
-package BVs_Boids;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -199,7 +197,7 @@ class Boids {
         int x = (int) b.position.data[0] - 10;
         int y = (int) b.position.data[1] - 10;
 
-        Image image = new ImageIcon("src/BVs_Boids/Boid.png").getImage();
+        Image image = new ImageIcon("src/Boid.png").getImage();
 
         Graphics2D g2d = (Graphics2D) g;
         AffineTransform originalTransform = g2d.getTransform();
@@ -223,7 +221,7 @@ class Boids {
         int x = (int) b.position.data[0] - 10;
         int y = (int) b.position.data[1] - 10;
 
-        Image image = new ImageIcon("src/BVs_Boids/FocusedBoid.png").getImage();
+        Image image = new ImageIcon("src/FocusedBoid.png").getImage();
 
         Graphics2D g2d = (Graphics2D) g;
         AffineTransform originalTransform = g2d.getTransform();
@@ -249,7 +247,7 @@ class Boids {
 
         int circleNumber = (int) (fov/ 22.5) - 1;
 
-        Image circle = new ImageIcon("src/BVs_Boids/Circle_" + circleNumber + ".png").getImage();
+        Image circle = new ImageIcon("src/Circle_" + circleNumber + ".png").getImage();
 
         Graphics2D g2d = (Graphics2D) g;
         AffineTransform originalTransform = g2d.getTransform();

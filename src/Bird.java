@@ -1,11 +1,9 @@
-package BVs_Boids;
-
 class Bird {
-    BVs_Boids.Vector position;
-    BVs_Boids.Vector velocity;
+    Vector position;
+    Vector velocity;
     boolean isImportant;
 
-    public Bird(BVs_Boids.Vector position, BVs_Boids.Vector velocity) {
+    public Bird(Vector position, Vector velocity) {
         this.position = position;
         this.velocity = velocity;
     }
@@ -41,7 +39,7 @@ class Bird {
     }
 
 
-    public BVs_Boids.Vector cohesion(Bird[] birds, double cohesionCoefficient) {
+    public Vector cohesion(Bird[] birds, double cohesionCoefficient) {
         if (birds.length == 0 || cohesionCoefficient == 0) return new Vector(0,0);
         Vector center = new Vector(0,0);
         for (Bird b : birds) center = center.plus(b.position);
@@ -49,7 +47,7 @@ class Bird {
         return center.minus(position).div(cohesionCoefficient);
     }
 
-    public BVs_Boids.Vector alignment(Bird[] birds, int alignmentCoefficient) {
+    public Vector alignment(Bird[] birds, int alignmentCoefficient) {
         if (birds.length == 0 || alignmentCoefficient == 0) return new Vector(0,0);
         Vector avgVelocity = new Vector(0,0);
         for (Bird b : birds) avgVelocity = avgVelocity.plus(b.velocity);
@@ -57,8 +55,8 @@ class Bird {
         return avgVelocity.minus(velocity).div(alignmentCoefficient);
     }
 
-    public BVs_Boids.Vector separation(Bird[] birds, double separationCoefficient) {
-        BVs_Boids.Vector c = new BVs_Boids.Vector(0,0);
+    public Vector separation(Bird[] birds, double separationCoefficient) {
+        Vector c = new Vector(0,0);
         for (Bird bird : birds)
             if ((bird.position.minus(position).magnitude()) < separationCoefficient)
                 c = c.minus(bird.position.minus(position));

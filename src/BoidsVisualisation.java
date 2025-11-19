@@ -1,5 +1,3 @@
-package BVs_Boids;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.HashMap;

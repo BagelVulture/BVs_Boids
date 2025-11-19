@@ -1,5 +1,3 @@
-package BVs_Boids;
-
 public class Vector {
     int N;
     double[] data;
